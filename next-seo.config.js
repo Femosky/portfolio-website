@@ -4,11 +4,11 @@ export default {
     openGraph: {
         type: 'website',
         locale: 'en_CA',
-        url: 'https://www.yourwebsite.com/',
+        url: 'https://femi-portfolio-gray.vercel.app/blog',
         siteName: "Femi's Portfolio",
     },
     twitter: {
-        handle: '@yourhandle',
+        handle: '@olufemiojeyemi',
         site: '@site',
         cardType: 'summary_large_image',
     },
