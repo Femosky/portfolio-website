@@ -40,9 +40,7 @@ export default function CryptoSymbols() {
                         <ChevronLeft /> Back
                     </div>
                 </Link>
-                <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-orange-500 text-center mb-5">
-                    Cryptocurrency Symbols
-                </h1>
+                <h1 className="text-base sm:text-2xl text-[#EA4335] font-bold mb-5">Cryptocurrency Symbols</h1>
                 <p className="mb-10">
                     The Crypto Symbols API provides a list of all available cryptocurrency ticker symbols. It can be
                     used in conjunction with the Crypto Price API to retrieve price data.

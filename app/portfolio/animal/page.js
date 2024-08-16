@@ -51,9 +51,7 @@ export default function Animal() {
                         <ChevronLeft /> Back
                     </div>
                 </Link>
-                <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-orange-500 text-center mb-5">
-                    Animal Info
-                </h1>
+                <h1 className="text-base sm:text-2xl text-[#EA4335] font-bold mb-5">Animal Info</h1>
                 <p className="mb-10">
                     The Animals API provides interesting scientific facts on thousands of different animal species.
                 </p>

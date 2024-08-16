@@ -56,9 +56,7 @@ export default function CelebrityInfo() {
                         <ChevronLeft /> Back
                     </div>
                 </Link>
-                <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-orange-500 text-center mb-5">
-                    Celebrity Info
-                </h1>
+                <h1 className="text-base sm:text-2xl text-[#EA4335] font-bold mb-5">Celebrity Info</h1>
                 <p className="mb-10">
                     The Celebrity API provides the most popular information, such as net worth, profession, and
                     birthday, on famous individuals all around the world. Our comprehensive database contains
