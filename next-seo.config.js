@@ -1,15 +1,14 @@
-// next-seo.config.js
 export default {
-    title: "Femi's Porfolio",
+    title: "Femi's Portfolio",
     description: 'A quick and fancy look at my professional suite!',
     openGraph: {
         type: 'website',
         locale: 'en_CA',
         url: 'https://www.yourwebsite.com/',
-        site_name: "Femi's Porfolio",
+        siteName: "Femi's Portfolio",
     },
     twitter: {
-        handle: '@olufemiojeyemi',
+        handle: '@yourhandle',
         site: '@site',
         cardType: 'summary_large_image',
     },
