@@ -6,6 +6,7 @@ import axios from 'axios';
 import Navbar from '@/components/Navbar';
 import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export default function Animal() {
     const [input, setInput] = useState('');
@@ -150,6 +151,7 @@ export default function Animal() {
                     )}
                 </main>
             </div>
+            <Footer />
         </>
     );
 }

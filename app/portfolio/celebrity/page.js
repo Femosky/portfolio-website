@@ -5,6 +5,7 @@ import axios from 'axios';
 import Navbar from '@/components/Navbar';
 import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export default function CelebrityInfo() {
     const [name, setName] = useState('');
@@ -134,6 +135,7 @@ export default function CelebrityInfo() {
                     )}
                 </main>
             </div>
+            <Footer />
         </>
     );
 }
