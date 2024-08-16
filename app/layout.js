@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             {/* <head>
                 <DefaultSeo {...SEO} />
+                <link rel="icon" href="/favicon.ico" sizes="any" />
             </head> */}
             <body className={inter.className}>{children}</body>
         </html>
