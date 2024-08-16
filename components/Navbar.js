@@ -44,28 +44,28 @@ export default function Navbar() {
                 </Link>
                 <ul className="hidden | md:flex md:gap-10">
                     <li
-                        className={`text-sm hover:text-primary-hover transition-colors bg-secondary text-primary ${
+                        className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isAboutPage && 'text-primary-hover font-medium'
                         }`}
                     >
                         <Link href="/about">About</Link>
                     </li>
                     <li
-                        className={`text-sm hover:text-primary-hover transition-colors bg-secondary text-primary ${
+                        className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isPortfolioPage && 'text-primary-hover font-medium'
                         }`}
                     >
                         <Link href="/portfolio">Portfolio</Link>
                     </li>
                     <li
-                        className={`text-sm hover:text-primary-hover transition-colors bg-secondary text-primary ${
+                        className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isBlogPage && 'text-primary-hover font-medium'
                         }`}
                     >
                         <Link href="/blog">Blog</Link>
                     </li>
                     <li
-                        className={`text-sm hover:text-primary-hover transition-colors bg-secondary text-primary ${
+                        className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isContactPage && 'text-primary-hover font-medium'
                         }`}
                     >

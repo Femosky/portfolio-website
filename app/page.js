@@ -43,7 +43,7 @@ export default function Home() {
                                 </h4>
                             </div>
 
-                            <Button onClick={redirectToAboutMe} variant="dark">
+                            <Button onClick={redirectToAboutMe} className="hover:bg-[#19B49B]" variant="dark">
                                 About me
                             </Button>
                         </div>
