@@ -88,7 +88,7 @@ export const blogPosts = [
     {
         id: 2,
         title: 'Building APIs with FastAPI: A Step-by-Step Guide for Mac and Windows',
-        image: '/mobile.png',
+        image: '/fast.png',
         link: 'https://medium.com/@sonamgour17/building-apis-with-fastapi-a-step-by-step-guide-for-mac-and-windows-5194ffc5ea1f',
         preview: 'FastAPI is a modern, high-performance web framework for building APIs with Python...',
         content: (
@@ -141,7 +141,7 @@ def read_root():
     {
         id: 3,
         title: 'Creating Your First Next.js Application: A Step-by-Step Guide',
-        image: '/web-dev.png',
+        image: '/next.png',
         link: 'https://medium.com/@sonamgour17/creating-your-first-next-js-application-a-step-by-step-guide-6188577f339a',
         preview: 'Next.js is a popular framework for React that makes building fast, modern web applications easier...',
         content: (
