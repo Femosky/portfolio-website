@@ -14,7 +14,11 @@ export default function About() {
                 <main className="flex flex-col gap-24">
                     <section className="sticky">
                         <div>
-                            <img className="rounded-md" src="/profile_image_2.jpeg" alt="profile pic" />
+                            <img
+                                className="rounded-md transform transition-transform duration-300 ease-in-out hover:scale-110"
+                                src="/profile_image_2.jpeg"
+                                alt="profile pic"
+                            />
                         </div>
                     </section>
 
@@ -51,8 +55,9 @@ export default function About() {
                                 <li className="transition-opacity">
                                     <a
                                         className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
+                                        href="https://www.conestogacondors.ca/landing/index"
                                         target="_blank"
-                                        href=""
+                                        rel="noopener noreferrer"
                                     >
                                         <div className="flex items-center gap-4">
                                             <img
@@ -71,8 +76,9 @@ export default function About() {
                                 <li className="transition-opacity">
                                     <a
                                         className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
+                                        href="https://dsa.mil.ng"
                                         target="_blank"
-                                        href=""
+                                        rel="noopener noreferrer"
                                     >
                                         <div className="flex items-center gap-4">
                                             <img
@@ -91,8 +97,9 @@ export default function About() {
                                 <li className="transition-opacity">
                                     <a
                                         className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
+                                        href="https://new-diccc.vercel.app"
                                         target="_blank"
-                                        href=""
+                                        rel="noopener noreferrer"
                                     >
                                         <div className="flex items-center gap-4">
                                             <img
@@ -120,8 +127,9 @@ export default function About() {
                                 <li className="transition-opacity">
                                     <a
                                         className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
+                                        href="https://conestogac.on.ca"
                                         target="_blank"
-                                        href=""
+                                        rel="noopener noreferrer"
                                     >
                                         <div className="flex items-center gap-4">
                                             <img
@@ -140,8 +148,9 @@ export default function About() {
                                 <li className="transition-opacity">
                                     <a
                                         className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
+                                        href="https://covenantuniversity.edu.ng"
                                         target="_blank"
-                                        href=""
+                                        rel="noopener noreferrer"
                                     >
                                         <div className="flex items-center gap-4">
                                             <img
