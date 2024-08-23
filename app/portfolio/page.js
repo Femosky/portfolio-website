@@ -25,7 +25,7 @@ export default function Portfolio() {
         {
             id: 1,
             title: 'Best Social Media',
-            image: '/best.png',
+            image: '/best.jpeg',
             description: 'A social media platform with a focus on privacy and community.',
             link: 'https://best-social-media.vercel.app',
             // link: '/portfolio/animal',
@@ -41,7 +41,7 @@ export default function Portfolio() {
         {
             id: 3,
             title: 'Gift Card eCommerce App',
-            image: '/gift-cards.png',
+            image: '/gift-cards.jpeg',
             description:
                 'This app was an assignment to make orders on the frontend, which data will be submitted and handled by the backend (PHP) and then the database will be store and retrieved from the database.',
             link: 'https://github.com/Femosky/Assignment-4_Olufemi-Ojeyemi',
@@ -49,7 +49,7 @@ export default function Portfolio() {
         {
             id: 4,
             title: 'Map Location and Weather Data App',
-            image: '/locations.png',
+            image: '/locations.jpeg',
             description:
                 'This app was an assignment to utilize location services to provide map directions and weather data to the user.',
             link: 'https://github.com/Femosky/Olufemi_Ojeyemi_FE_8919998',
@@ -64,7 +64,7 @@ export default function Portfolio() {
         {
             id: 6,
             title: 'YouTube Clone - Tutorial',
-            image: '/youtube-clone-wds.png',
+            image: '/youtube-clone-wds.jpeg',
             description: 'A REACT + TypeScript + Tailwind online tutorial I took to clone YouTube',
             link: 'https://youtube-clone-wds.vercel.app',
             // link: '/portfolio/crypto',
