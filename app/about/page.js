@@ -83,7 +83,7 @@ export default function About() {
                                                 alt="dsa logo"
                                             />
                                             <div className="flex flex-col gap-px">
-                                                <p className="external-arrow">Engieering Officer (Software Group)</p>
+                                                <p className="external-arrow">Engineering Officer (Software Group)</p>
                                                 <p className="text-primary">Defence Space Administration</p>
                                             </div>
                                         </div>
