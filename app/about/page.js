@@ -32,13 +32,8 @@ export default function About() {
                                 solutions at Conestoga College.
                             </p>
                             <p>
-                                When I’m not lost in code, you can find me exploring content creation on Instagram,
-                                blending my love for art and tech. I’m all about turning ideas into something tangible,
-                                whether it’s a new app or a video that tells a story.
-                            </p>
-                            <p>
-                                Outside of the tech world, I’m probably playing video games, trying out new recipes, or
-                                just vibing to some cool tunes. Life’s all about balance, right?
+                                {`Outside of the tech world, I’m probably playing video games, trying out new recipes, or
+                                just vibing to some cool tunes. "All work and no play make Jack a dull boy!"`}
                             </p>
                         </div>
                     </section>
@@ -48,8 +43,9 @@ export default function About() {
 
                         <div className="flex w-full flex-col gap-8">
                             <p>
-                                I am primarily experienced in Frontend Web Development in React and Next.js. I have also
-                                worked as an IT Professional and video producer
+                                I am primarily experienced in Frontend Web Development in React and Next.js and iOS
+                                Development in SwiftUI and UIKit . I have also worked as an IT Professional and video
+                                producer.
                             </p>
                             <ul className="flex flex-col gap-8 animated-list">
                                 <li className="transition-opacity">

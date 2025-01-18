@@ -23,6 +23,14 @@ export default function Portfolio() {
 
     const projects = [
         {
+            id: 0,
+            title: 'Roki',
+            image: '/roki-logo.png',
+            description: 'An iOS app to find and connect with friends in a foreign country or new location.',
+            link: 'https://rokiapp.vercel.app',
+            // link: '/portfolio/animal',
+        },
+        {
             id: 1,
             title: 'Best Social Media',
             image: '/best.jpeg',
@@ -80,21 +88,31 @@ export default function Portfolio() {
                     <h3 className="text-sm text-primary md:text-xl">Check out my cool projects!</h3>
                 </section>
                 <main className="flex flex-col gap-24">
-                    <section className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+                    <section className="grid grid-cols-1 sm:grid-cols-1 gap-12">
                         {projects.map((project) => (
-                            <div key={project.id} className="cursor-pointer">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        width={800}
-                                        height={300}
-                                        className="rounded-md object-cover object-[center_top] w-full h-48 sm:h-60 md:h-52 transform transition-transform duration-300 ease-in-out hover:scale-110"
-                                    />
-                                </a>
-                                <h4 className="text-lg mt-4">{project.title}</h4>
-                                <p className="text-primary">{truncateText(project.description, 75)}</p>
-                            </div>
+                            <>
+                                <div key={project.id} className="flex flex-col mdb:flex-row cursor-pointer gap-5">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            width={800}
+                                            height={300}
+                                            className={`rounded-md object-cover ${
+                                                project.id === 0 ? '' : 'object-[center_top]'
+                                            } w-full xs:min-w-[17rem] xs:w-[17rem] h-52 transform transition-transform duration-300 ease-in-out hover:scale-105`}
+                                        />
+                                    </a>
+                                    <div>
+                                        <h4 className="text-lg mt-4">{project.title}</h4>
+                                        <p className="text-primary">{truncateText(project.description, 275)}</p>
+                                    </div>
+                                </div>
+
+                                {project.id < projects.length - 1 && (
+                                    <div className="border-t border-gray-200 w-full" />
+                                )}
+                            </>
                         ))}
                     </section>
                 </main>

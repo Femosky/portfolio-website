@@ -42,7 +42,7 @@ export default function Home() {
                             </Button>
                         </div>
 
-                        <div className="border-t border-gray-200 w-full"></div>
+                        <div className="border-t border-gray-200 w-full" />
 
                         <div className="flex flex-col items-center gap-5">
                             <h2 className="text-red-500 text-3xl font-semibold">New</h2>
