@@ -61,7 +61,7 @@ export default function Home() {
                                     target="_blank"
                                 >
                                     <h4 className="text-base md:text-lg text-blue-500">
-                                        Available on the the Apple App Store
+                                        Available on the Apple App Store
                                     </h4>
                                 </a>
 
