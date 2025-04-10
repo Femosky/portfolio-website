@@ -32,6 +32,15 @@ export default function Portfolio() {
         },
         {
             id: 1,
+            title: 'Klinic - Booking System',
+            image: '/klinic-screenshot.jpeg',
+            description:
+                'A flexible appointment booking system that clinics can utilize to manage their appointment systems. This was a capstone group project for my Mobile Solutions Development at Conestoga College.',
+            link: 'https://clinic-booking-system-hazel.vercel.app',
+            // link: '/portfolio/animal',
+        },
+        {
+            id: 2,
             title: 'Best Social Media',
             image: '/best.jpeg',
             description: 'A social media platform with a focus on privacy and community.',
@@ -39,7 +48,7 @@ export default function Portfolio() {
             // link: '/portfolio/animal',
         },
         {
-            id: 2,
+            id: 3,
             title: 'Firebase Social Media - Tutorial',
             image: '/fir-pedrotech.png',
             description: 'A REACT + TypeScript online tutorial I took to use practice Firebase',
@@ -47,7 +56,7 @@ export default function Portfolio() {
             // link: '/portfolio/celebrity',
         },
         {
-            id: 3,
+            id: 4,
             title: 'Gift Card eCommerce App',
             image: '/gift-cards.jpeg',
             description:
@@ -55,7 +64,7 @@ export default function Portfolio() {
             link: 'https://github.com/Femosky/Assignment-4_Olufemi-Ojeyemi',
         },
         {
-            id: 4,
+            id: 5,
             title: 'Map Location and Weather Data App',
             image: '/locations.jpeg',
             description:
@@ -63,14 +72,14 @@ export default function Portfolio() {
             link: 'https://github.com/Femosky/Olufemi_Ojeyemi_FE_8919998',
         },
         {
-            id: 5,
+            id: 6,
             title: 'Grades Management App',
             image: '/grades.png',
             description: 'This app was an assignment to manage grades for a school system to track students grades.',
             link: 'https://github.com/Femosky/grades-management-app/tree/main',
         },
         {
-            id: 6,
+            id: 7,
             title: 'YouTube Clone - Tutorial',
             image: '/youtube-clone-wds.jpeg',
             description: 'A REACT + TypeScript + Tailwind online tutorial I took to clone YouTube',
