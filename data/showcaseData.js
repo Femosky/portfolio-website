@@ -42,7 +42,7 @@ function RokiShowcaseTitle() {
     return (
         <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
             Download my first ever published app,
-            <span className="flex items-center gap-[1px] italic">
+            <span className="flex items-center gap-[1px] italic w-5">
                 <img className="w-5" src="/roki-logo.png" alt="roki app logo" />
                 oki
             </span>
