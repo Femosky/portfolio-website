@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/Button';
 import { Globe } from 'lucide-react';
 import { projects } from '../../data/projects';
+import { DividerLine } from '@/components/DividerLine';
 
 export default function Portfolio() {
     function openProject(project) {
@@ -97,9 +98,7 @@ export default function Portfolio() {
                                     </div>
                                 </div>
 
-                                {project.id < projects.length - 1 && (
-                                    <div className="border-t border-gray-200 w-full" />
-                                )}
+                                {project.id < projects.length - 1 && <DividerLine />}
                             </div>
                         ))}
                     </section>
