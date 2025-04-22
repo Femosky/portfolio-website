@@ -38,7 +38,7 @@ export const showcaseItems = [
     },
 ];
 
-function RokiShowcaseTitle() {
+export function RokiShowcaseTitle() {
     return (
         <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
             Download my first ever published app,
@@ -50,7 +50,7 @@ function RokiShowcaseTitle() {
     );
 }
 
-function RokiShowcaseDescription() {
+export function RokiShowcaseDescription() {
     return (
         <p className="text-center text-sm md:text-base max-w-[25rem] text-black opacity-40">
             A native SwiftUI <span className="text-sm italic text-black opacity-70">(UIKit used as well)</span> app
