@@ -2,10 +2,10 @@ export const showcaseItems = [
     {
         id: 0,
         isNew: true,
-        title: RokiShowcaseTitle,
+        title: <RokiShowcaseTitle />,
         ctaTitle: 'Available on the Apple App Store',
         ctaTitleLink: 'https://apps.apple.com/us/app/roki-for-the-african-diaspora/id6740173437',
-        description: RokiShowcaseDescription,
+        description: <RokiShowcaseDescription />,
         image: '/roki-screenshot.jpeg',
         imageAlt: 'roki app screenshot',
         ctaButton: 'Learn more',

@@ -17,7 +17,7 @@ export function ShowcaseItem({ showcaseItem }) {
                             {showcaseItem.title}
                         </h3>
                     ) : (
-                        showcaseItem.title()
+                        showcaseItem.title
                     )}
 
                     <a href={showcaseItem.ctaTitleLink} target="_blank">
@@ -29,7 +29,7 @@ export function ShowcaseItem({ showcaseItem }) {
                             {showcaseItem.description}
                         </p>
                     ) : (
-                        showcaseItem.description()
+                        showcaseItem.description
                     )}
 
                     <div className={imageRem ? imageRem : `max-w-[30rem]`}>
