@@ -40,7 +40,7 @@ export const showcaseItems = [
 
 function RokiShowcaseTitle() {
     return (
-        <h3 className="h-5 flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
+        <h3 className="w-5 flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
             Download my first ever published app,
             <span className="inline-flex items-center gap-1 italic">
                 <img className="w-5 h-auto" src="/roki-logo.png" alt="roki app logo" />
