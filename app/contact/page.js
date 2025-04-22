@@ -26,7 +26,7 @@ export default function Contact() {
                             </a>
                             <a href="https://github.com/Femosky" target="_blank" rel="noopener noreferrer">
                                 <div className="flex gap-8 md:gap-4 items-center bg-primary-highlight px-2 py-3 rounded-md transition-opacity hover:bg-primary-highlightHover">
-                                    <img className="w-10" src="/github.png" alt="email icon" />
+                                    <img className="w-10" src="/github.png" alt="github icon" />
                                     <p>GitHub</p>
                                 </div>
                             </a>
@@ -36,7 +36,7 @@ export default function Contact() {
                                 rel="noopener noreferrer"
                             >
                                 <div className="flex gap-8 md:gap-4 items-center bg-primary-highlight px-2 py-3 rounded-md transition-opacity hover:bg-primary-highlightHover">
-                                    <img className="w-10" src="/linkedin.png" alt="email icon" />
+                                    <img className="w-10" src="/linkedin.png" alt="linkedin icon" />
                                     <p>LinkedIn</p>
                                 </div>
                             </a>
@@ -46,13 +46,13 @@ export default function Contact() {
                                 rel="noopener noreferrer"
                             >
                                 <div className="flex gap-8 md:gap-4 items-center bg-primary-highlight px-2 py-3 rounded-md transition-opacity hover:bg-primary-highlightHover">
-                                    <img className="w-10" src="/instagram.png" alt="email icon" />
+                                    <img className="w-10" src="/instagram.png" alt="instagram icon" />
                                     <p>Instagram</p>
                                 </div>
                             </a>
                             <a href="https://x.com/olufemiojeyemi" target="_blank" rel="noopener noreferrer">
                                 <div className="flex gap-8 md:gap-4 items-center bg-primary-highlight px-2 py-3 rounded-md transition-opacity hover:bg-primary-highlightHover">
-                                    <img className="w-10" src="/twitter.png" alt="email icon" />
+                                    <img className="w-10" src="/twitter.png" alt="twitter icon" />
                                     <p>Twitter</p>
                                 </div>
                             </a>
@@ -62,7 +62,7 @@ export default function Contact() {
                                 rel="noopener noreferrer"
                             >
                                 <div className="flex gap-8 md:gap-4 items-center bg-primary-highlight px-2 py-3 rounded-md transition-opacity hover:bg-primary-highlightHover">
-                                    <img className="w-10" src="/facebook.png" alt="email icon" />
+                                    <img className="w-10" src="/facebook.png" alt="facebook icon" />
                                     <p>Facebook</p>
                                 </div>
                             </a>

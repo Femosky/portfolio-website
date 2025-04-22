@@ -35,7 +35,7 @@ export default function Blog() {
                 <main className="flex flex-col gap-24 max-w-[60rem]">
                     <section className="gap-4">
                         <h2 className="text-base sm:text-2xl font-semibold text-[#EA4335] mb-2">Blog</h2>
-                        <h3 className="text-xl">Here's our latest blogs on Technology!</h3>
+                        <h3 className="text-xl">Here are some cool reads!</h3>
                     </section>
                     <section className="grid grid-cols-1 sm:grid-cols-2 gap-12">
                         {blogPosts.map((post) => (

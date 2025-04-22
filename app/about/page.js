@@ -1,9 +1,21 @@
+'use client';
+
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import { MoveUpRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { Button } from '@/components/Button';
+import { SpecialIcon } from '@/components/SpecialIcon';
 
 export default function About() {
+    const router = useRouter();
+
+    function redirectToPortfolio() {
+        router.push('/portfolio');
+    }
+
     return (
         <>
             <Navbar />
@@ -26,14 +38,17 @@ export default function About() {
                         <h2 className="shrink-0 w-36 text-primary">About</h2>
                         <div className="flex flex-col gap-6">
                             <p>
-                                Hey there! I’m Femi, born and raised in Nigeria, now exploring the world of tech from
-                                Canada. I’ve been coding for a few years now, diving into everything from web and mobile
-                                app development to cool AI projects. Currently, I’m sharpening my skills in mobile
-                                solutions at Conestoga College.
-                            </p>
-                            <p>
-                                {`Outside of the tech world, I’m probably playing video games, trying out new recipes, or
-                                just vibing to some cool tunes. "All work and no play make Jack a dull boy!"`}
+                                Hi, I'm Femi. Thanks for coming over, I'm a software front-end developer that likes to
+                                build what I like. Please take a look at my work and hit me up if you want to work with
+                                me!{' '}
+                                <span onClick={redirectToPortfolio} className="inline-flex">
+                                    <Button
+                                        variant="hollow"
+                                        className="px-2 py-1 shrink-0 text-xs flex gap-1 items-center"
+                                    >
+                                        Projects <MoveUpRight className="w-4" />
+                                    </Button>
+                                </span>
                             </p>
                         </div>
                     </section>
@@ -43,9 +58,15 @@ export default function About() {
 
                         <div className="flex w-full flex-col gap-8">
                             <p>
-                                I am primarily experienced in Frontend Web Development in React and Next.js and iOS
-                                Development in SwiftUI and UIKit . I have also worked as an IT Professional and video
-                                producer.
+                                Experienced in{' '}
+                                <span className="inline-flex">
+                                    <SpecialIcon text="React" src="/react-icon.png" alt="react icon" />
+                                </span>{' '}
+                                and{' '}
+                                <span className="inline-flex">
+                                    <SpecialIcon text="iOS" src="/swift.png" alt="swift icon" />
+                                </span>{' '}
+                                development. I have also worked as an IT Professional and video producer.
                             </p>
                             <ul className="flex flex-col gap-8 animated-list">
                                 <li className="transition-opacity">

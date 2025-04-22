@@ -10,6 +10,7 @@ export default function Navbar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const path = usePathname();
 
+    const isHomePage = path === '/';
     const isAboutPage = path === '/about';
     const isPortfolioPage = path === '/portfolio';
     const isBlogPage = path === '/blog';
@@ -43,6 +44,13 @@ export default function Navbar() {
                     <img className="w-12 h-12 rounded-full object-cover" src="/logo.jpg" alt="Logo" />
                 </Link>
                 <ul className="hidden | md:flex md:gap-10">
+                    <li
+                        className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
+                            isHomePage && 'text-primary-hover font-medium'
+                        }`}
+                    >
+                        <Link href="/">Home</Link>
+                    </li>
                     <li
                         className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isAboutPage && 'text-primary-hover font-medium'
@@ -83,6 +91,14 @@ export default function Navbar() {
                         <X className="w-8 h-8" />
                     </Button>
                     <ul className="flex flex-col gap-6 text-center text-white">
+                        <li
+                            className={`text-lg text-primary hover:text-primary-hover transition-colors ${
+                                isHomePage && 'text-primary-hover font-medium'
+                            }`}
+                            onClick={closeNav}
+                        >
+                            <Link href="/">Home</Link>
+                        </li>
                         <li
                             className={`text-lg text-primary hover:text-primary-hover transition-colors ${
                                 isAboutPage && 'text-primary-hover font-medium'
