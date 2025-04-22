@@ -2,7 +2,15 @@ export const showcaseItems = [
     {
         id: 0,
         isNew: true,
-        title: <RokiShowcaseTitle />,
+        title: (
+            <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
+                Download my first ever published app,
+                <span className="inline-flex items-center gap-1 italic">
+                    <img className="size-5" src="/roki-logo.png" alt="roki app logo" />
+                </span>
+                oki
+            </h3>
+        ),
         ctaTitle: 'Available on the Apple App Store',
         ctaTitleLink: 'https://apps.apple.com/us/app/roki-for-the-african-diaspora/id6740173437',
         description: <RokiShowcaseDescription />,
