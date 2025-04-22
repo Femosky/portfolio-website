@@ -28,9 +28,19 @@ export default function Home() {
                     <div className="flex flex-col items-center w-full gap-14 justify-center">
                         <Intro redirectToAboutMe={redirectToAboutMe} />
 
-                        {showcaseItems.map((showcaseItem) => {
-                            return <ShowcaseItem key={showcaseItem.id} showcaseItem={showcaseItem} />;
-                        })}
+                        {showcaseItems.map((showcaseItem) =>
+                            showcaseItem.id === 0 ? (
+                                <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
+                                    Download my first ever published app,
+                                    <span className="inline-flex items-center gap-1 italic">
+                                        <img className="size-5" src="/roki-logo.png" alt="roki app logo" />
+                                    </span>
+                                    oki
+                                </h3>
+                            ) : (
+                                <ShowcaseItem key={showcaseItem.id} showcaseItem={showcaseItem} />
+                            )
+                        )}
 
                         <div className="w-full flex flex-col items-center">
                             <DividerLine />
