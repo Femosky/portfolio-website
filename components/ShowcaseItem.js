@@ -8,10 +8,10 @@ export function ShowcaseItem({ showcaseItem }) {
         <>
             <DividerLine />
 
-            <div className="flex flex-col items-center gap-5">
+            <div className="w-full flex flex-col items-center gap-5">
                 {showcaseItem.isNew && <h2 className="text-red-500 text-3xl font-semibold">New</h2>}
 
-                <div className="flex-1 flex flex-col items-center gap-3">
+                <div className="w-full flex-1 flex flex-col items-center gap-3">
                     {typeof showcaseItem.title === 'string' ? (
                         <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
                             {showcaseItem.title}
