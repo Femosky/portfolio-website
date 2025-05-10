@@ -3,6 +3,7 @@ import './globals.css';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +23,10 @@ export default function RootLayout({ children }) {
                 <DefaultSeo {...SEO} />
                 <link rel="icon" href="/favicon.ico" sizes="any" />
             </Head>
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                {children}
+                <Analytics />
+            </body>
         </html>
     );
 }
