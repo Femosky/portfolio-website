@@ -87,7 +87,7 @@ export default function About() {
                                                 <p className="text-primary">Conestoga College</p>
                                             </div>
                                         </div>
-                                        <time className="">2024 -</time>
+                                        <time className="">2024 - 2025</time>
                                     </a>
                                 </li>
                                 <li className="transition-opacity">
@@ -104,7 +104,7 @@ export default function About() {
                                                 alt="dsa logo"
                                             />
                                             <div className="flex flex-col gap-px">
-                                                <p className="external-arrow">Engineering Officer (Software Group)</p>
+                                                <p className="external-arrow">Software Engineer</p>
                                                 <p className="text-primary">Defence Space Administration</p>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@ export default function About() {
                                                 <p className="text-primary">Conestoga College</p>
                                             </div>
                                         </div>
-                                        <time className="">2024 -</time>
+                                        <time className="">2024 - 2025</time>
                                     </a>
                                 </li>
                                 <li className="transition-opacity">
