@@ -46,11 +46,11 @@ export default function Contact() {
     return (
         <>
             <Navbar />
-            <div className="mx-auto max-w-[45rem] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-                <main className="flex flex-col gap-4 md:gap-8 max-w-[60rem]">
+            <div className="mx-auto max-w-[45rem] h-full min-h-[50vh] md:min-h-[80vh] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+                <main className="flex flex-col max-w-[60rem]">
                     <PageTitle
                         pageTitle="Contact me"
-                        subTitle="If you'd love to chat with me or contact me for work, shoot me either"
+                        subTitle="If you are interested in hiring or would like to chat, please contact me via any of these."
                     />
 
                     <section className="col-reverse flex flex-col gap-2 md:flex-row md:gap-9">

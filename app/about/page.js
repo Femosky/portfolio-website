@@ -127,12 +127,20 @@ export default function About() {
                             <p>
                                 Experienced in{' '}
                                 <span className="inline-flex">
-                                    <SpecialIcon text="React" src="/react-icon.png" alt="react icon" />
-                                </span>{' '}
-                                and{' '}
+                                    <SpecialIcon text="React.js" src="/react-icon.png" alt="react js icon" />
+                                </span>
+                                ,{' '}
                                 <span className="inline-flex">
                                     <SpecialIcon text="iOS" src="/swift.png" alt="swift icon" />
+                                </span>
+                                ,{' '}
+                                <span className="inline-flex">
+                                    <SpecialIcon text="Node.js" src="/node-js.png" alt="node js icon" />
                                 </span>{' '}
+                                &{' '}
+                                <span className="inline-flex">
+                                    <SpecialIcon text="Express.js" src="/express-js.png" alt="express js icon" />
+                                </span>
                                 development.
                             </p>
 
