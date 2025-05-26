@@ -105,7 +105,7 @@ export default function About() {
                         <h2 className="shrink-0 w-36 text-primary">About</h2>
                         <div className="flex flex-col gap-6">
                             <p>
-                                Hi, I'm Femi. Thanks for coming over, I'm a full-stack software developer that likes to
+                                Hi, I'm Femi. Thanks for coming over, I'm a full stack software developer that likes to
                                 build interesting and stress-alleviating software. Please take a look at my work and
                                 contact me if you are interested in hiring or working together!{' '}
                                 <span onClick={redirectToPortfolio} className="inline-flex">
