@@ -6,10 +6,12 @@ export function ShowcaseItem({ showcaseItem }) {
 
     return (
         <>
-            <DividerLine />
+            <DividerLine className="max-w-[45rem]" />
 
             <div className="w-full flex flex-col items-center gap-5">
-                {showcaseItem.isNew && <h2 className="text-red-500 text-3xl font-semibold">New</h2>}
+                {showcaseItem.isNew && (
+                    <h2 className="text-red-500 text-lg sm:text-2xl md:text-3xl font-semibold">New</h2>
+                )}
 
                 <div className="w-full flex-1 flex flex-col items-center gap-3">
                     {typeof showcaseItem.title === 'string' ? (

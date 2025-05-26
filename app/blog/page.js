@@ -7,6 +7,7 @@ import { blogPosts } from '../../data/blogData';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/Button';
 import { X } from 'lucide-react';
+import { PageTitle } from '@/components/PageTitle';
 
 export default function Blog() {
     const [selectedPost, setSelectedPost] = useState(null);
@@ -32,11 +33,9 @@ export default function Blog() {
         <>
             <Navbar />
             <div className={`mx-auto max-w-[45rem] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20`}>
-                <main className="flex flex-col gap-24 max-w-[60rem]">
-                    <section className="gap-4">
-                        <h2 className="text-base sm:text-2xl font-semibold text-[#EA4335] mb-2">Blog</h2>
-                        <h3 className="text-xl">Here are some cool reads!</h3>
-                    </section>
+                <main className="flex flex-col max-w-[60rem]">
+                    <PageTitle pageTitle="Blog" subTitle="Here are some cool reads!" />
+
                     <section className="grid grid-cols-1 sm:grid-cols-2 gap-12">
                         {blogPosts.map((post) => (
                             <div key={post.id} className="cursor-pointer" onClick={() => openPost(post)}>

@@ -2,6 +2,18 @@ export const showcaseItems = [
     {
         id: 0,
         isNew: true,
+        title: 'MapOfSecrets - Full Stack Web App ',
+        ctaTitle: 'Try it out!',
+        ctaTitleLink: 'https://map-of-secrets.vercel.app',
+        description: 'Interactive Map to Share and View Secrets on the Globe',
+        image: '/map-of-secrets-screenshot.jpeg',
+        imageAlt: 'MapOfSecrets web app screenshot',
+        ctaButton: 'View on GitHub',
+        ctaButtonLink: 'https://github.com/Femosky/MapOfSecrets',
+    },
+    {
+        id: 1,
+        isNew: true,
         title: <RokiShowcaseTitle />,
         ctaTitle: 'Available on the Apple App Store',
         ctaTitleLink: 'https://apps.apple.com/us/app/roki-for-the-african-diaspora/id6740173437',
@@ -12,8 +24,8 @@ export const showcaseItems = [
         ctaButtonLink: 'https://rokiapp.vercel.app',
     },
     {
-        id: 1,
-        isNew: true,
+        id: 2,
+        isNew: false,
         title: 'VoiceGPT - Wear OS and Android duo app',
         ctaTitle: '',
         ctaTitleLink: '',
@@ -25,7 +37,7 @@ export const showcaseItems = [
         ctaButtonLink: 'https://github.com/gurjotsaini/Group6FinalGroupProject',
     },
     {
-        id: 2,
+        id: 3,
         isNew: false,
         title: 'Klinic - Booking System',
         ctaTitle: 'Check out the website.',

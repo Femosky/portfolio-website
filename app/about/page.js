@@ -8,6 +8,7 @@ import { MoveUpRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/Button';
 import { SpecialIcon } from '@/components/SpecialIcon';
+import { PageTitle } from '@/components/PageTitle';
 
 export default function About() {
     const router = useRouter();
@@ -16,14 +17,80 @@ export default function About() {
         router.push('/portfolio');
     }
 
+    const workExperienceItems = [
+        {
+            title: 'Freelancer',
+            company: '',
+            start: '2025',
+            end: '',
+            image: '/logo.jpg',
+            alt: 'freelance logo',
+            website: '/portfolio',
+            target: '',
+            rel: '',
+        },
+        // {
+        //     title: 'Esports Lead',
+        //     company: 'Conestoga College',
+        //     start: '2024',
+        //     end: '2025',
+        //     image: '/conestoga.svg',
+        //     alt: 'conestoga logo',
+        //     website: 'https://www.conestogacondors.ca/landing/index',
+        // },
+        {
+            title: 'Software Engineer',
+            company: 'Defence Space Administration',
+            start: '2023',
+            end: '2023',
+            image: '/dsa.jpg',
+            alt: 'dsa logo',
+            website: 'https://dsa.mil.ng',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+        },
+        // {
+        //     title: 'IT Professional',
+        //     company: 'Defence Intelligence College',
+        //     start: '2022',
+        //     end: '2023',
+        //     image: '/dic.jpg',
+        //     alt: 'dic logo',
+        //     website: 'https://new-diccc.vercel.app',
+        // },
+    ];
+    const educationItems = [
+        {
+            title: 'Mobile Solutions Development',
+            school: 'Conestoga College',
+            start: '2024',
+            end: '2025',
+            image: '/conestoga.svg',
+            alt: 'conestoga logo',
+            website: 'https://conestogac.on.ca',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+        },
+        {
+            title: 'Computer Engineering',
+            company: 'Covenant University',
+            start: '2016',
+            end: '2022',
+            image: '/cu-logo.png',
+            alt: 'covenant university logo',
+            website: 'https://dsa.mil.ng',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+        },
+    ];
+
     return (
         <>
             <Navbar />
             <div className="mx-auto max-w-[45rem] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-                <section className="mb-8">
-                    <h2 className="text-base sm:text-2xl font-semibold text-[#EA4335]">About Me</h2>
-                </section>
-                <main className="flex flex-col gap-24">
+                <PageTitle pageTitle="About me" />
+
+                <main className="flex flex-col gap-10 md:gap-24">
                     <section className="sticky">
                         <div>
                             <img
@@ -68,70 +135,11 @@ export default function About() {
                                 </span>{' '}
                                 development. I have also worked as an IT Professional and video producer.
                             </p>
+
                             <ul className="flex flex-col gap-8 animated-list">
-                                <li className="transition-opacity">
-                                    <a
-                                        className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
-                                        href="https://www.conestogacondors.ca/landing/index"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <img
-                                                src="/conestoga.svg"
-                                                className="w-12 rounded-full object-cover"
-                                                alt="conestoga logo"
-                                            />
-                                            <div className="flex flex-col gap-px">
-                                                <p className="external-arrow">Esports Lead</p>
-                                                <p className="text-primary">Conestoga College</p>
-                                            </div>
-                                        </div>
-                                        <time className="">2024 - 2025</time>
-                                    </a>
-                                </li>
-                                <li className="transition-opacity">
-                                    <a
-                                        className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
-                                        href="https://dsa.mil.ng"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <img
-                                                src="/dsa.jpg"
-                                                className="w-12 rounded-full object-cover"
-                                                alt="dsa logo"
-                                            />
-                                            <div className="flex flex-col gap-px">
-                                                <p className="external-arrow">Software Engineer</p>
-                                                <p className="text-primary">Defence Space Administration</p>
-                                            </div>
-                                        </div>
-                                        <time className="">2023 - 2023</time>
-                                    </a>
-                                </li>
-                                <li className="transition-opacity">
-                                    <a
-                                        className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
-                                        href="https://new-diccc.vercel.app"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <img
-                                                src="/dic.jpg"
-                                                className="w-12 rounded-full object-cover"
-                                                alt="dic logo"
-                                            />
-                                            <div className="flex flex-col gap-px">
-                                                <p className="external-arrow">IT Professional</p>
-                                                <p className="text-primary">Defence Intelligence College</p>
-                                            </div>
-                                        </div>
-                                        <time className="">2022 - 2023</time>
-                                    </a>
-                                </li>
+                                {workExperienceItems.map((item, index) => {
+                                    return <ExperienceItem key={index} item={item} />;
+                                })}
                             </ul>
                         </div>
                     </section>
@@ -141,48 +149,11 @@ export default function About() {
 
                         <div className="flex w-full flex-col gap-8">
                             <ul className="flex flex-col gap-8 animated-list">
-                                <li className="transition-opacity">
-                                    <a
-                                        className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
-                                        href="https://conestogac.on.ca"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <img
-                                                src="/conestoga.svg"
-                                                className="w-12 rounded-full object-cover"
-                                                alt="conestoga logo"
-                                            />
-                                            <div className="flex flex-col gap-px">
-                                                <p className="external-arrow">Mobile Solutions Development</p>
-                                                <p className="text-primary">Conestoga College</p>
-                                            </div>
-                                        </div>
-                                        <time className="">2024 - 2025</time>
-                                    </a>
-                                </li>
-                                <li className="transition-opacity">
-                                    <a
-                                        className="underline-offset-4 flex justify-between w-full px-3 py-2 -mx-3 -my-2 no-underline"
-                                        href="https://covenantuniversity.edu.ng"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <img
-                                                src="/cu-logo.png"
-                                                className="w-12 rounded-full object-cover"
-                                                alt="cu logo"
-                                            />
-                                            <div className="flex flex-col gap-px">
-                                                <p className="external-arrow">Bachelors in Computer Engineering</p>
-                                                <p className="text-primary">Covenant University</p>
-                                            </div>
-                                        </div>
-                                        <time className="">2016 - 2021</time>
-                                    </a>
-                                </li>
+                                <ul className="flex flex-col gap-8 animated-list">
+                                    {educationItems.map((item, index) => {
+                                        return <ExperienceItem key={index} item={item} />;
+                                    })}
+                                </ul>
                             </ul>
                         </div>
                     </section>
@@ -190,5 +161,29 @@ export default function About() {
             </div>
             <Footer />
         </>
+    );
+}
+
+function ExperienceItem({ item }) {
+    return (
+        <li className="w-full transition-opacity">
+            <a
+                className="underline-offset-4 flex justify-between w-full pl-3 py-2 -my-2 no-underline"
+                href={item.website}
+                target={item.target}
+                rel={item.rel}
+            >
+                <div className="flex items-center w-2/3 gap-4">
+                    <img src={item.image} className="w-12 rounded-full object-cover" alt={item.alt} />
+                    <div className="flex flex-col gap-px">
+                        <p className="external-arrow">{item.title}</p>
+                        <p className="text-primary">{item.company}</p>
+                    </div>
+                </div>
+                <p className="w-1/3 text-right">
+                    {item.start} - {item.end}
+                </p>
+            </a>
+        </li>
     );
 }

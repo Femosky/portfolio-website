@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from './Button';
 import { Menu, X } from 'lucide-react';
+import { DividerLine } from './DividerLine';
 
 export default function Navbar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -38,8 +39,8 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className="mt-6">
-            <nav className="mx-auto flex max-w-[45rem] items-center justify-between gap-3 px-4 py-3 md:px-6">
+        <header className="sticky top-0 z-50 px-6 bg-white flex flex-col w-full justify-between">
+            <nav className="mx-auto flex w-full max-w-[45rem] items-center justify-between gap-3 px-4 pt-9 pb-6 md:px-6">
                 <Link href="/">
                     <img className="w-12 h-12 rounded-full object-cover" src="/logo.jpg" alt="Logo" />
                 </Link>
@@ -51,6 +52,7 @@ export default function Navbar() {
                     >
                         <Link href="/">Home</Link>
                     </li>
+
                     <li
                         className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isAboutPage && 'text-primary-hover font-medium'
@@ -58,6 +60,7 @@ export default function Navbar() {
                     >
                         <Link href="/about">About</Link>
                     </li>
+
                     <li
                         className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isPortfolioPage && 'text-primary-hover font-medium'
@@ -65,6 +68,7 @@ export default function Navbar() {
                     >
                         <Link href="/portfolio">Portfolio</Link>
                     </li>
+
                     <li
                         className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isBlogPage && 'text-primary-hover font-medium'
@@ -72,6 +76,7 @@ export default function Navbar() {
                     >
                         <Link href="/blog">Blog</Link>
                     </li>
+
                     <li
                         className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary ${
                             isContactPage && 'text-primary-hover font-medium'
@@ -79,11 +84,19 @@ export default function Navbar() {
                     >
                         <Link href="/contact">Contact</Link>
                     </li>
+
+                    <li className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary`}>
+                        <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                            My resume
+                        </Link>
+                    </li>
                 </ul>
                 <Button className={`md:hidden ${isNavOpen && 'hidden'}`} onClick={toggleNav}>
                     <Menu />
                 </Button>
             </nav>
+
+            <DividerLine className="max-w-[45rem] place-self-center" />
 
             {isNavOpen && (
                 <div className="fixed inset-0 z-50 bg-white bg-opacity-95 flex flex-col items-center justify-center">
@@ -99,6 +112,7 @@ export default function Navbar() {
                         >
                             <Link href="/">Home</Link>
                         </li>
+
                         <li
                             className={`text-lg text-primary hover:text-primary-hover transition-colors ${
                                 isAboutPage && 'text-primary-hover font-medium'
@@ -107,6 +121,7 @@ export default function Navbar() {
                         >
                             <Link href="/about">About</Link>
                         </li>
+
                         <li
                             className={`text-lg text-primary hover:text-primary-hover transition-colors ${
                                 isPortfolioPage && 'text-primary-hover font-medium'
@@ -115,6 +130,7 @@ export default function Navbar() {
                         >
                             <Link href="/portfolio">Portfolio</Link>
                         </li>
+
                         <li
                             className={`text-lg text-primary hover:text-primary-hover transition-colors ${
                                 isBlogPage && 'text-primary-hover font-medium'
@@ -123,6 +139,7 @@ export default function Navbar() {
                         >
                             <Link href="/blog">Blog</Link>
                         </li>
+
                         <li
                             className={`text-lg text-primary hover:text-primary-hover transition-colors ${
                                 isContactPage && 'text-primary-hover font-medium'
@@ -130,6 +147,15 @@ export default function Navbar() {
                             onClick={closeNav}
                         >
                             <Link href="/contact">Contact</Link>
+                        </li>
+
+                        <li
+                            className={`text-lg text-primary hover:text-primary-hover transition-colors`}
+                            onClick={closeNav}
+                        >
+                            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                                My resume
+                            </Link>
                         </li>
                     </ul>
                 </div>

@@ -1,3 +1,5 @@
-export function DividerLine() {
-    return <div className="border-t border-gray-200 w-full" />;
+import { twMerge } from 'tailwind-merge';
+
+export function DividerLine({ className, ...props }) {
+    return <div {...props} className={twMerge('border-t border-gray-200 w-full', className)} />;
 }

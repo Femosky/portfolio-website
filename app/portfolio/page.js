@@ -8,6 +8,7 @@ import { Button } from '@/components/Button';
 import { Globe } from 'lucide-react';
 import { projects } from '../../data/projects';
 import { DividerLine } from '@/components/DividerLine';
+import { PageTitle } from '@/components/PageTitle';
 
 export default function Portfolio() {
     function openProject(project) {
@@ -35,10 +36,8 @@ export default function Portfolio() {
         <>
             <Navbar />
             <div className="mx-auto max-w-[45rem] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-                <section className="mb-24">
-                    <h2 className="text-base sm:text-2xl font-semibold text-[#EA4335] mb-2">My Projects</h2>
-                    <h3 className="text-sm text-primary md:text-xl">Check out my cool projects!</h3>
-                </section>
+                <PageTitle pageTitle="My Projects" subTitle="Check out my cool projects!" />
+
                 <main className="flex flex-col gap-24">
                     <section className="grid grid-cols-1 sm:grid-cols-1 gap-12">
                         {projects.map((project) => (
