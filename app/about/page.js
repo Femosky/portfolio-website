@@ -62,7 +62,7 @@ export default function About() {
     const educationItems = [
         {
             title: 'Mobile Solutions Development',
-            school: 'Conestoga College',
+            company: 'Conestoga College',
             start: '2024',
             end: '2025',
             image: '/conestoga.svg',
@@ -105,9 +105,9 @@ export default function About() {
                         <h2 className="shrink-0 w-36 text-primary">About</h2>
                         <div className="flex flex-col gap-6">
                             <p>
-                                Hi, I'm Femi. Thanks for coming over, I'm a software front-end developer that likes to
-                                build what I like. Please take a look at my work and hit me up if you want to work with
-                                me!{' '}
+                                Hi, I'm Femi. Thanks for coming over, I'm a full-stack software developer that likes to
+                                build interesting and stress-alleviating software. Please take a look at my work and
+                                contact me if you are interested in hiring or working together!{' '}
                                 <span onClick={redirectToPortfolio} className="inline-flex">
                                     <Button
                                         variant="hollow"
@@ -133,7 +133,7 @@ export default function About() {
                                 <span className="inline-flex">
                                     <SpecialIcon text="iOS" src="/swift.png" alt="swift icon" />
                                 </span>{' '}
-                                development. I have also worked as an IT Professional and video producer.
+                                development.
                             </p>
 
                             <ul className="flex flex-col gap-8 animated-list">

@@ -61,10 +61,10 @@ function Intro({ redirectToAboutMe }) {
                     Welcome to my ePortfolio!
                 </h2>
                 <h3 className=" text-base text-center sm:text-2xl mdp:text-3xl md:mb-2 text-[#EA4335]">
-                    I am a passionate software developer
+                    I am a passionate full stack software developer
                 </h3>
                 <h4 className="text-sm text-center max-w-[30rem] font-light sm:text-base mdp:text-lg text-black opacity-40">
-                    Specializing in REACT and iOS Development. Currently learning machine learning technologies!
+                    Experienced in React.js, iOS Development, and Node.js & Express.js!
                 </h4>
             </div>
 
