@@ -28,8 +28,8 @@ export default function Home() {
                     <div className="flex flex-col items-center w-full gap-10 md:gap-14 justify-center">
                         <Intro redirectToAboutMe={redirectToAboutMe} />
 
-                        {showcaseItems.map((showcaseItem) => {
-                            return <ShowcaseItem key={showcaseItem.id} showcaseItem={showcaseItem} />;
+                        {showcaseItems.map((showcaseItem, index) => {
+                            return <ShowcaseItem key={index} showcaseItem={showcaseItem} />;
                         })}
 
                         <div className="w-full flex flex-col items-center">

@@ -1,6 +1,5 @@
 export const showcaseItems = [
     {
-        id: 0,
         isNew: true,
         title: 'MapOfSecrets - Full Stack Web App ',
         ctaTitle: 'Try it out!',
@@ -12,7 +11,6 @@ export const showcaseItems = [
         ctaButtonLink: 'https://github.com/Femosky/MapOfSecrets',
     },
     {
-        id: 1,
         isNew: true,
         title: <RokiShowcaseTitle />,
         ctaTitle: 'Available on the Apple App Store',
@@ -24,12 +22,11 @@ export const showcaseItems = [
         ctaButtonLink: 'https://rokiapp.vercel.app',
     },
     {
-        id: 2,
         isNew: false,
         title: 'VoiceGPT - Wear OS and Android duo app',
         ctaTitle: '',
         ctaTitleLink: '',
-        description: 'AI Voice Assitant to assist your only through talking.',
+        description: 'AI Voice Assitant to assist you only through talking.',
         image: '/voicegpt.png',
         imageRem: 'max-w-[25rem]',
         imageAlt: 'voice gpt screenshot',
@@ -37,7 +34,6 @@ export const showcaseItems = [
         ctaButtonLink: 'https://github.com/gurjotsaini/Group6FinalGroupProject',
     },
     {
-        id: 3,
         isNew: false,
         title: 'Klinic - Booking System',
         ctaTitle: 'Check out the website.',
