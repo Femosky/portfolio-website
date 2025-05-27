@@ -40,8 +40,8 @@ export default function Portfolio() {
 
                 <main className="flex flex-col gap-24">
                     <section className="grid grid-cols-1 sm:grid-cols-1 gap-12">
-                        {projects.map((project) => (
-                            <div key={project.id} className="w-full flex flex-col gap-10">
+                        {projects.map((project, index) => (
+                            <div key={index} className="w-full flex flex-col gap-10">
                                 <div className="w-full flex flex-col md:flex-row items-center gap-5 transform transition-transform duration-300 ease-in-out hover:scale-105">
                                     <div className="relative min-w-[17rem] w-full md:w-1/3 h-52 flex justify-center border-2 rounded-md overflow-hidden">
                                         <div
@@ -56,7 +56,7 @@ export default function Portfolio() {
                                                 src={project.image}
                                                 alt={project.title}
                                                 className={`object-cover w-full h-full ${
-                                                    project.id === 0 ? '' : 'object-[center_top]'
+                                                    index === 0 ? '' : 'object-[center_top]'
                                                 }`}
                                             />
                                         </div>
@@ -97,7 +97,7 @@ export default function Portfolio() {
                                     </div>
                                 </div>
 
-                                {project.id < projects.length - 1 && <DividerLine />}
+                                {index < projects.length - 1 && <DividerLine />}
                             </div>
                         ))}
                     </section>
