@@ -75,7 +75,7 @@ export default function About() {
             title: 'Computer Engineering',
             company: 'Covenant University',
             start: '2016',
-            end: '2022',
+            end: '2021',
             image: '/cu-logo.png',
             alt: 'covenant university logo',
             website: 'https://dsa.mil.ng',
@@ -106,7 +106,7 @@ export default function About() {
                         <div className="flex flex-col gap-6">
                             <p>
                                 Hi, I'm Femi. Thanks for coming over, I'm a full stack software developer that likes to
-                                build interesting and stress-alleviating software. Please take a look at my work and
+                                build interesting and stress-alleviating software. You can take a look at my work and
                                 contact me if you are interested in hiring or working together!{' '}
                                 <span onClick={redirectToPortfolio} className="inline-flex">
                                     <Button

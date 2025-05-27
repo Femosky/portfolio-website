@@ -50,7 +50,7 @@ export default function Contact() {
                 <main className="flex flex-col max-w-[60rem]">
                     <PageTitle
                         pageTitle="Contact me"
-                        subTitle="If you are interested in hiring or would like to chat, please contact me via any of these."
+                        subTitle="If you are interested in hiring or would like to chat, you can contact me via any of these."
                     />
 
                     <section className="col-reverse flex flex-col gap-2 md:flex-row md:gap-9">
