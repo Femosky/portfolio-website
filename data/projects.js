@@ -18,7 +18,7 @@ export const projects = [
         image: '/voicegpt.png',
         description:
             'Cross-platform voice assistant for Wear OS and Android using the ChatGPT API to handle voice queries and sync chat history across devices.',
-        github: 'https://github.com/gurjotsaini/Group6FinalGroupProject',
+        github: 'https://github.com/Femosky/VoiceGPT',
     },
     {
         title: 'Klinic - Booking System',
