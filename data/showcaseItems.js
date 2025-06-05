@@ -31,7 +31,7 @@ export const showcaseItems = [
         imageRem: 'max-w-[25rem]',
         imageAlt: 'voice gpt screenshot',
         ctaButton: 'View on GitHub',
-        ctaButtonLink: 'https://github.com/gurjotsaini/Group6FinalGroupProject',
+        ctaButtonLink: 'https://github.com/Femosky/VoiceGPT',
     },
     {
         isNew: false,
