@@ -86,7 +86,7 @@ export default function Navbar() {
                     </li>
 
                     <li className={`text-sm hover:text-[#19B49B] transition-colors bg-secondary text-primary`}>
-                        <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <Link href="/resume" target="_blank" rel="noopener noreferrer">
                             My resume
                         </Link>
                     </li>
@@ -153,7 +153,7 @@ export default function Navbar() {
                             className={`text-lg text-primary hover:text-primary-hover transition-colors`}
                             onClick={closeNav}
                         >
-                            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                            <Link href="/resume" target="_blank" rel="noopener noreferrer">
                                 My resume
                             </Link>
                         </li>
