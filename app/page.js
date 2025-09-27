@@ -20,6 +20,13 @@ export default function Home() {
         router.push('/portfolio');
     }
 
+    const project = {
+        title: 'Project Forum',
+        description:
+            'A community-based forum to help get out the information and knowlegde of the Nigerian people on the web. Helping Nigerians share and get information pertinent to them.',
+        github: 'https://github.com/Femosky/project-forum-backend',
+    };
+
     return (
         <div className="w-screen flex flex-col">
             <Navbar />
@@ -27,6 +34,8 @@ export default function Home() {
                 <div className="flex flex-col w-full max-w-7xl">
                     <div className="flex flex-col items-center w-full gap-10 md:gap-14 justify-center">
                         <Intro redirectToAboutMe={redirectToAboutMe} />
+
+                        <WorkingOn project={project} />
 
                         {showcaseItems.map((showcaseItem, index) => {
                             return <ShowcaseItem key={index} showcaseItem={showcaseItem} />;
@@ -47,6 +56,36 @@ export default function Home() {
             </main>
             <Footer />
         </div>
+    );
+}
+
+function WorkingOn({ project }) {
+    function goToLink(url) {
+        window.open(url, '_blank');
+    }
+
+    return (
+        <>
+            <DividerLine className="max-w-[45rem]" />
+
+            <div className="flex flex-col items-center justify-center gap-6 w-fit">
+                <h2 className="md:text-2xl font-medium">
+                    Working on - <span className="text-green-500 italic">{project.title}</span>
+                </h2>
+
+                <p className="text-center font-light text-sm md:text-base max-w-[45rem] text-black opacity-40">
+                    {project.description}
+                </p>
+
+                <Button
+                    onClick={() => goToLink(project.github)}
+                    variant="hollow"
+                    className="hover:bg-[#19B49B] hover:bg-opacity-25"
+                >
+                    Learn more
+                </Button>
+            </div>
+        </>
     );
 }
 
