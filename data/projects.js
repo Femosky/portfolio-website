@@ -1,5 +1,11 @@
 export const projects = [
     {
+        title: 'Cardernir',
+        image: '/cardernir-logo.jpeg',
+        description: 'Language-learning flashcard app using spaced repetition to help you learn more vocabulary.',
+        link: 'https://www.cardernir.app',
+    },
+    {
         title: 'MapOfSecrets',
         image: '/map-of-secrets-screenshot.jpeg',
         description: 'Interactive Map to Share and View Secrets on the Globe',

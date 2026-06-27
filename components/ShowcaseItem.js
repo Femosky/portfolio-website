@@ -10,29 +10,33 @@ export function ShowcaseItem({ showcaseItem }) {
 
             <div className="w-full flex flex-col items-center gap-5">
                 {showcaseItem.isNew && (
-                    <h2 className="text-red-500 text-lg sm:text-2xl md:text-3xl font-semibold">New</h2>
+                    <h2 className="text-red-500 text-sm sm:text-base md:text-lg font-semibold">New</h2>
                 )}
 
-                <div className="w-full flex-1 flex flex-col items-center gap-3">
-                    {typeof showcaseItem.title === 'string' ? (
-                        <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
-                            {showcaseItem.title}
-                        </h3>
-                    ) : (
-                        showcaseItem.title
-                    )}
+                <div className="w-full flex-1 flex flex-col items-center gap-3 md:gap-6">
+                    <div className="flex flex-col items-center gap-3">
+                        {typeof showcaseItem.title === 'string' ? (
+                            <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
+                                {showcaseItem.title}
+                            </h3>
+                        ) : (
+                            showcaseItem.title
+                        )}
 
-                    <a href={showcaseItem.ctaTitleLink} target="_blank">
-                        <h4 className="text-base md:text-lg text-blue-500">{showcaseItem.ctaTitle}</h4>
-                    </a>
+                        <a href={showcaseItem.ctaTitleLink} target="_blank">
+                            <h4 className="text-base md:text-lg text-blue-500">{showcaseItem.ctaTitle}</h4>
+                        </a>
 
-                    {typeof showcaseItem.description === 'string' ? (
-                        <p className="text-center text-sm md:text-base max-w-[25rem] text-black opacity-40">
-                            {showcaseItem.description}
-                        </p>
-                    ) : (
-                        showcaseItem.description
-                    )}
+                        {typeof showcaseItem.description === 'string' ? (
+                            <p
+                                className={`text-center font-light opacity-40 text-sm md:text-base ${showcaseItem.descriptionResize ? 'max-w-[50rem]' : 'max-w-[25rem]'} text-black opacity-40`}
+                            >
+                                {showcaseItem.description}
+                            </p>
+                        ) : (
+                            showcaseItem.description
+                        )}
+                    </div>
 
                     <div className={imageRem ? imageRem : `max-w-[30rem]`}>
                         <img className="rounded-md w-full" src={showcaseItem.image} alt={showcaseItem.imageAlt} />
