@@ -28,7 +28,7 @@ export default function Home() {
     };
 
     return (
-        <div className="w-screen flex flex-col">
+        <div className="w-full flex flex-col">
             <Navbar />
             <main className="flex-1 flex items-start justify-start pt-16 md:mt-16 md:pt-0 md:items-center md:justify-center px-6 md:px-6 mb-10">
                 <div className="flex flex-col w-full max-w-7xl">
