@@ -9,6 +9,11 @@ export const projects = [
         title: 'MapOfSecrets',
         image: '/map-of-secrets-screenshot.jpeg',
         description: 'Interactive Map to Share and View Secrets on the Globe',
+        dead: {
+            status: true,
+            message: 'This project is no longer maintained and has been archived.',
+            date: '2026-07-02T03:31:41.232Z',
+        },
         link: 'https://map-of-secrets.vercel.app/',
         github: 'https://github.com/Femosky/MapOfSecrets',
     },

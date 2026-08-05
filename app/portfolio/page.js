@@ -66,10 +66,20 @@ export default function Portfolio() {
                                         <div>
                                             <h4 className="text-lg mt-4">{project.title}</h4>
                                             <p className="text-primary">{truncateText(project.description, 275)}</p>
+
+                                            {project.dead && (
+                                                <span className="text-xs text-neutral-400 dark:text-neutral-500">
+                                                    {project.dead.message} · Updated{' '}
+                                                    {new Date(project.dead.date).toLocaleDateString(undefined, {
+                                                        month: 'short',
+                                                        year: 'numeric',
+                                                    })}
+                                                </span>
+                                            )}
                                         </div>
 
                                         <div className="w-fill flex gap-2 self-center sm:self-end">
-                                            {project.link && (
+                                            {project.link && !project.dead && (
                                                 <Button
                                                     onClick={() => goToLink(project.link)}
                                                     variant="hollow"
