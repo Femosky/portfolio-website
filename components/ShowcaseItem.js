@@ -2,6 +2,18 @@ import { Button } from './Button';
 import { DividerLine } from './DividerLine';
 
 export function ShowcaseItem({ showcaseItem }) {
+    return (
+        <>
+            {showcaseItem.type === 'complete' ? (
+                <CompletedShowcaseItem showcaseItem={showcaseItem} />
+            ) : (
+                <InProgressShowcaseItem showcaseItem={showcaseItem} />
+            )}
+        </>
+    );
+}
+
+function CompletedShowcaseItem({ showcaseItem }) {
     const { imageRem } = showcaseItem;
 
     return (
@@ -48,6 +60,36 @@ export function ShowcaseItem({ showcaseItem }) {
                         </Button>
                     </a>
                 </div>
+            </div>
+        </>
+    );
+}
+
+function InProgressShowcaseItem({ showcaseItem }) {
+    function goToLink(url) {
+        window.open(url, '_blank');
+    }
+
+    return (
+        <>
+            <DividerLine className="max-w-[45rem]" />
+
+            <div className="flex flex-col items-center justify-center gap-6 w-fit">
+                <h2 className="md:text-2xl font-medium">
+                    Working on - <span className="text-green-500 italic">{showcaseItem.project.title}</span>
+                </h2>
+
+                <p className="text-center font-light text-sm md:text-base max-w-[45rem] text-black opacity-40">
+                    {showcaseItem.project.description}
+                </p>
+
+                <Button
+                    onClick={() => goToLink(showcaseItem.project.github)}
+                    variant="hollow"
+                    className="hover:bg-[#19B49B] hover:bg-opacity-25"
+                >
+                    Learn more
+                </Button>
             </div>
         </>
     );

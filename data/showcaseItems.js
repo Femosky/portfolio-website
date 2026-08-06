@@ -1,5 +1,6 @@
 export const showcaseItems = [
     {
+        type: 'complete',
         isNew: true,
         title: <CardernirShowcaseTitle />,
         ctaTitle: 'Available on the Apple App Store',
@@ -14,6 +15,16 @@ export const showcaseItems = [
         ctaButtonLink: 'https://www.cardernir.app',
     },
     {
+        type: 'inProgress',
+        project: {
+            title: 'Project Forum',
+            description:
+                'A community-based forum to help get out the information and knowlegde of the Nigerian people on the web. Helping Nigerians share and get information pertinent to them.',
+            github: 'https://github.com/Femosky/project-forum-backend',
+        },
+    },
+    {
+        type: 'complete',
         isNew: false,
         title: <RokiShowcaseTitle />,
         ctaTitle: 'Available on the Apple App Store',
@@ -36,6 +47,7 @@ export const showcaseItems = [
     //     ctaButtonLink: 'https://github.com/Femosky/MapOfSecrets',
     // },
     {
+        type: 'complete',
         isNew: false,
         title: 'VoiceGPT - Wear OS and Android duo app',
         ctaTitle: '',
