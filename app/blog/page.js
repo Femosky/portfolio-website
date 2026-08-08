@@ -1,10 +1,7 @@
 'use client';
 
-import Image from 'next/image';
-import Navbar from '@/components/Navbar';
 import { useState } from 'react';
 import { blogPosts } from '../../data/blogData';
-import Footer from '@/components/Footer';
 import { Button } from '@/components/Button';
 import { X } from 'lucide-react';
 import { PageTitle } from '@/components/PageTitle';
@@ -31,14 +28,13 @@ export default function Blog() {
 
     return (
         <>
-            <Navbar />
             <div className={`mx-auto max-w-[45rem] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20`}>
                 <main className="flex flex-col max-w-[60rem]">
                     <PageTitle pageTitle="Blog" subTitle="Here are some cool reads!" />
 
                     <section className="grid grid-cols-1 sm:grid-cols-2 gap-12">
                         {blogPosts.map((post) => (
-                            <div key={post.id} className="cursor-pointer" onClick={() => openPost(post)}>
+                            <div key={post.id} data-reveal className="cursor-pointer" onClick={() => openPost(post)}>
                                 <img
                                     src={post.image}
                                     alt={post.title}
@@ -59,11 +55,11 @@ export default function Blog() {
                 >
                     <div
                         onClick={(event) => event.stopPropagation()}
-                        className="relative flex flex-col items-center w-full max-w-[80rem] max-h-[90%] bg-white rounded-md p-6 overflow-y-auto"
+                        className="relative flex flex-col items-center w-full max-w-[80rem] max-h-[90%] bg-secondary text-secondary-normal rounded-md p-6 overflow-y-auto"
                     >
                         <div className="flex flex-col max-w-[45rem]">
                             <div className="flex items-center justify-between mb-6">
-                                <h2 className="text-base sm:text-lg md:text-2xl font-semibold">{selectedPost.title}</h2>
+                                <h2 className="text-base font-medium sm:text-lg md:text-2xl">{selectedPost.title}</h2>
                                 <Button size="round" className="px-2" onClick={closeOverlay}>
                                     <X />
                                 </Button>
@@ -75,7 +71,7 @@ export default function Blog() {
                                         <img className="w-6" src="/medium.png" alt="medium logo" />
                                     </span>
                                     <span>
-                                        <img className="w-6" src="/new-tab.png" alt="medium logo" />
+                                        <img className="w-6 dark:invert" src="/new-tab.png" alt="Open in new tab" />
                                     </span>
                                 </div>
                             </a>
@@ -91,8 +87,6 @@ export default function Blog() {
                     </div>
                 </div>
             )}
-
-            <Footer />
         </>
     );
 }

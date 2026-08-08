@@ -74,7 +74,7 @@ export const showcaseItems = [
 
 function CardernirShowcaseTitle() {
     return (
-        <h3 className="text-xl md:text-3xl font-semibold tracking-tight bg-gradient-to-r from-[#5856D6] via-[#426BFF] to-[#30B0C7] text-transparent bg-clip-text">
+        <h3 className="text-3xl md:text-5xl font-semibold tracking-tight bg-gradient-to-r from-[#5856D6] via-[#426BFF] to-[#30B0C7] text-transparent bg-clip-text">
             Cardernir
         </h3>
     );
@@ -82,7 +82,7 @@ function CardernirShowcaseTitle() {
 
 function RokiShowcaseTitle() {
     return (
-        <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-lg md:text-xl text-center">
+        <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-2xl md:text-3xl text-center">
             Download my first ever published app,
             <span className="inline-flex items-center gap-1 italic">
                 <img className="size-5" src="/roki-logo.png" alt="roki app logo" />
@@ -94,7 +94,7 @@ function RokiShowcaseTitle() {
 
 function RokiShowcaseDescription() {
     return (
-        <p className="text-center text-sm md:text-base max-w-[25rem] font-light opacity-40">
+        <p className="max-w-[32rem] text-center text-base font-normal text-primary md:text-lg">
             A native SwiftUI <span className="text-sm italic">(UIKit used as well)</span> app using Firebase to handle
             the backend and database!
         </p>

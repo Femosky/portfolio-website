@@ -2,6 +2,7 @@ import colors from 'tailwindcss/colors';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'class',
     content: [
         './pages/**/*.{js,ts,jsx,tsx,mdx}',
         './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,27 +17,27 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    DEFAULT: '#646464',
-                    hover: '#202020',
-                    highlight: '#F9F9F9',
-                    highlightHover: '#F2F2F2',
+                    DEFAULT: 'rgb(var(--color-muted) / <alpha-value>)',
+                    hover: 'rgb(var(--color-foreground) / <alpha-value>)',
+                    highlight: 'rgb(var(--color-surface) / <alpha-value>)',
+                    highlightHover: 'rgb(var(--color-surface-muted) / <alpha-value>)',
                 },
                 secondary: {
-                    DEFAULT: '#ffffff',
-                    normal: '#1D1E24',
+                    DEFAULT: 'rgb(var(--color-surface) / <alpha-value>)',
+                    normal: 'rgb(var(--color-foreground) / <alpha-value>)',
                     hot: colors.red[700],
-                    hover: colors.neutral[100],
+                    hover: 'rgb(var(--color-surface-muted) / <alpha-value>)',
                     hotHover: colors.red[800],
-                    hoverHover: colors.neutral[300],
-                    border: colors.neutral[400],
-                    text: colors.zinc[500],
-                    dark: colors.zinc[900],
-                    darkHover: colors.zinc[950],
+                    hoverHover: 'rgb(var(--color-surface-strong) / <alpha-value>)',
+                    border: 'rgb(var(--color-border) / <alpha-value>)',
+                    text: 'rgb(var(--color-muted) / <alpha-value>)',
+                    dark: 'rgb(var(--color-button) / <alpha-value>)',
+                    darkHover: 'rgb(var(--color-button-hover) / <alpha-value>)',
+                    onDark: 'rgb(var(--color-button-text) / <alpha-value>)',
                 },
             },
             fontFamily: {
-                plusJakarta: ['Plus Jakarta Sans', 'sans-serif'],
-                inter: ['Inter', 'sans-serif'],
+                sans: ['var(--font-inter)', 'sans-serif'],
             },
             screens: {
                 xxs: '323px',

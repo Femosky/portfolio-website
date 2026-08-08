@@ -1,12 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
 import axios from 'axios';
-import Navbar from '@/components/Navbar';
 import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
+import { Button } from '@/components/Button';
 
 export default function Animal() {
     const [input, setInput] = useState('');
@@ -43,42 +41,34 @@ export default function Animal() {
     }
 
     return (
-        <>
-            <Navbar />
-            <div className="mx-auto max-w-[45rem] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+        <div className="mx-auto max-w-[45rem] px-6 pb-24 pt-16 md:px-6 md:pb-36 md:pt-20">
                 <Link href="/portfolio" className="flex self-start mb-10">
                     <div className="flex">
                         <ChevronLeft /> Back
                     </div>
                 </Link>
-                <h1 className="text-base sm:text-2xl text-[#EA4335] font-bold mb-5">Animal Info</h1>
+                <h1 className="mb-5 text-base font-medium text-[#EA4335] sm:text-2xl">Animal Info</h1>
                 <p className="mb-10">
                     The Animals API provides interesting scientific facts on thousands of different animal species.
                 </p>
-                <main className="w-full max-w-3xl border-[0.5px] border-black rounded-xl p-5">
+                <main className="w-full max-w-3xl border-[0.5px] border-secondary-border rounded-xl p-5">
                     <section className="flex flex-col items-center gap-4">
                         <input
-                            className="border-2 border-grey-500 px-4 py-2 text-base md:text-lg lg:text-xl w-full rounded-full"
+                            className="w-full rounded-full border border-secondary-border bg-primary-highlight/50 px-4 py-2 text-base text-secondary-normal outline-none transition-colors focus:border-secondary-normal/50 md:text-lg lg:text-xl"
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             type="text"
                             placeholder="Enter an Animal"
                         />
                         <div className="flex gap-2">
-                            <button
-                                className="bg-green-600 px-4 py-2 text-white font-medium rounded-md"
-                                onClick={getAnimalData}
-                            >
+                            <Button onClick={getAnimalData}>
                                 Search
-                            </button>
+                            </Button>
 
                             {data && (
-                                <button
-                                    className="bg-red-600 px-4 py-2 text-white font-medium rounded-md"
-                                    onClick={clearData}
-                                >
+                                <Button variant="hot" onClick={clearData}>
                                     Clear
-                                </button>
+                                </Button>
                             )}
                         </div>
 
@@ -91,10 +81,10 @@ export default function Animal() {
 
                     {data && (
                         <section className="w-full mt-10">
-                            <h2 className="text-lg md:text-xl font-semibold mb-4 text-center">{data.name}</h2>
+                            <h2 className="mb-4 text-center text-lg font-medium md:text-xl">{data.name}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <div>
-                                    <h3 className="text-md md:text-lg font-semibold">Taxonomy</h3>
+                                    <h3 className="text-md font-medium md:text-lg">Taxonomy</h3>
                                     <ul className="ml-4 text-sm md:text-base">
                                         <li>Kingdom: {data.taxonomy.kingdom}</li>
                                         <li>Phylum: {data.taxonomy.phylum}</li>
@@ -106,7 +96,7 @@ export default function Animal() {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className="text-md md:text-lg font-semibold">Locations</h3>
+                                    <h3 className="text-md font-medium md:text-lg">Locations</h3>
                                     <ul className="ml-4 text-sm md:text-base">
                                         {data.locations.map((location, index) => (
                                             <li key={index}>{location}</li>
@@ -114,7 +104,7 @@ export default function Animal() {
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3 className="text-md md:text-lg font-semibold">Characteristics</h3>
+                                    <h3 className="text-md font-medium md:text-lg">Characteristics</h3>
                                     <ul className="ml-4 text-sm md:text-base">
                                         <li>Prey: {data.characteristics.prey}</li>
                                         <li>Name of Young: {data.characteristics.name_of_young}</li>
@@ -148,8 +138,6 @@ export default function Animal() {
                         </section>
                     )}
                 </main>
-            </div>
-            <Footer />
-        </>
+        </div>
     );
 }

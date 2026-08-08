@@ -1,87 +1,71 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
-import Navbar from '@/components/Navbar';
-import { Button } from '@/components/Button';
+import { motion } from 'motion/react';
 import { useRouter } from 'next/navigation';
-import Footer from '@/components/Footer';
+import { Button } from '@/components/Button';
+import { HomeRevealSection, homeItemVariants } from '@/components/HomeMotion';
 import { ShowcaseItem } from '@/components/ShowcaseItem';
 import { showcaseItems } from '@/data/showcaseItems';
-import { DividerLine } from '@/components/DividerLine';
 
 export default function Home() {
     const router = useRouter();
 
-    function redirectToAboutMe() {
-        router.push('/about');
-    }
-    function redirectToPortfolio() {
-        router.push('/portfolio');
-    }
-
-    const project = {
-        title: 'Project Forum',
-        description:
-            'A community-based forum to help get out the information and knowlegde of the Nigerian people on the web. Helping Nigerians share and get information pertinent to them.',
-        github: 'https://github.com/Femosky/project-forum-backend',
-    };
-
     return (
-        <div className="w-full flex flex-col">
-            <Navbar />
-            <main className="flex-1 flex items-start justify-start pt-16 md:mt-16 md:pt-0 md:items-center md:justify-center px-6 md:px-6 mb-10">
-                <div className="flex flex-col w-full max-w-7xl">
-                    <div className="flex flex-col items-center w-full gap-10 md:gap-14 justify-center">
-                        <Intro redirectToAboutMe={redirectToAboutMe} />
+        <div className="flex w-full flex-col">
+            <main className="mb-10 flex flex-1 items-start justify-start px-6 pt-16 md:mt-16 md:items-center md:justify-center md:px-6 md:pt-0">
+                <div className="flex w-full max-w-7xl flex-col items-center gap-16 md:gap-24">
+                    <Intro onAbout={() => router.push('/about')} />
 
-                        {showcaseItems.map((showcaseItem, index) => {
-                            return <ShowcaseItem key={index} showcaseItem={showcaseItem} />;
-                        })}
+                    {showcaseItems.map((showcaseItem, index) => (
+                        <ShowcaseItem key={index} showcaseItem={showcaseItem} />
+                    ))}
 
-                        <div className="w-full flex flex-col items-center">
-                            <DividerLine className="max-w-[45rem]" />
-
-                            <Button
-                                onClick={redirectToPortfolio}
-                                className="mt-10 bg-red-500/90 text-white hover:bg-[#19B49B] hover:text-white"
-                            >
+                    <HomeRevealSection
+                        className="home-closing-section flex w-full flex-col items-center pb-10 pt-20 md:pb-16 md:pt-28"
+                        viewportAmount={0.35}
+                    >
+                        <motion.div variants={homeItemVariants}>
+                            <Button onClick={() => router.push('/portfolio')} variant="hot">
                                 View more projects
                             </Button>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </HomeRevealSection>
                 </div>
             </main>
-            <Footer />
         </div>
     );
 }
 
-function Intro({ redirectToAboutMe }) {
+function Intro({ onAbout }) {
     return (
-        <div className="flex flex-col gap-7 items-center md:gap-10 w-fit">
-            <h1 className="text-3xl text-center sm:text-5xl mdp:text-6xl font-bold bg-gradient-to-r from-[#FF00B8] from-50% via-[#004BDD] to-[#8F00FF] text-transparent bg-clip-text">
+        <HomeRevealSection
+            className="flex min-h-[64vh] w-fit flex-col items-center justify-center gap-8 md:min-h-[70vh] md:gap-12"
+            viewportAmount={0.35}
+        >
+            <motion.h1
+                variants={homeItemVariants}
+                className="bg-gradient-to-r from-[#FF00B8] from-50% via-[#004BDD] to-[#8F00FF] bg-clip-text text-center text-5xl font-bold text-transparent sm:text-7xl mdp:text-8xl"
+            >
                 Hello, I'm Femi
-            </h1>
-            <div className="flex flex-col gap-1 items-center md:gap-2">
-                <h2 className="font-semibold text-xl text-center sm:text-3xl mdp:text-4xl">
+            </motion.h1>
+
+            <motion.div variants={homeItemVariants} className="flex flex-col items-center gap-1 md:gap-2">
+                <h2 className="text-center text-2xl font-semibold sm:text-4xl mdp:text-5xl">
                     Welcome to my ePortfolio!
                 </h2>
-                <h3 className=" text-base text-center sm:text-2xl mdp:text-3xl md:mb-2 text-[#EA4335]">
-                    I am a fullstack software developer
+                <h3 className="text-center text-lg text-[#EA4335] sm:text-2xl md:mb-2 mdp:text-3xl">
+                    I am a full-stack software developer
                 </h3>
-                <h4 className="text-sm text-center max-w-[30rem] font-light sm:text-base mdp:text-lg text-black opacity-40">
+                <h4 className="max-w-[38rem] text-center text-base font-normal text-primary sm:text-lg mdp:text-xl">
                     Experienced in React.js, iOS Development, and Node.js & Express.js!
                 </h4>
-            </div>
+            </motion.div>
 
-            <Button
-                onClick={redirectToAboutMe}
-                variant="hollow"
-                className="mt-7 hover:bg-[#19B49B] hover:bg-opacity-25"
-            >
-                About me
-            </Button>
-        </div>
+            <motion.div variants={homeItemVariants}>
+                <Button onClick={onAbout} variant="hollow" className="mt-7">
+                    About me
+                </Button>
+            </motion.div>
+        </HomeRevealSection>
     );
 }

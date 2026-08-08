@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import { PageTitle } from '@/components/PageTitle';
 
 export default function Contact() {
@@ -10,12 +7,14 @@ export default function Contact() {
             url: 'mailto:olufemiojeyemi@gmail.com',
             image: '/email.png',
             alt: 'email icon',
+            invertInDark: true,
         },
         {
             name: 'GitHub',
             url: 'https://github.com/Femosky',
             image: '/github.png',
             alt: 'github icon',
+            invertInDark: true,
         },
         {
             name: 'LinkedIn',
@@ -44,9 +43,7 @@ export default function Contact() {
     ];
 
     return (
-        <>
-            <Navbar />
-            <div className="mx-auto max-w-[45rem] h-full min-h-[50vh] md:min-h-[80vh] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
+        <div className="mx-auto h-full min-h-[50vh] max-w-[45rem] px-6 pb-24 pt-16 md:min-h-[70vh] md:px-6 md:pb-36 md:pt-20">
                 <main className="flex flex-col max-w-[60rem]">
                     <PageTitle
                         pageTitle="Contact me"
@@ -61,18 +58,20 @@ export default function Contact() {
                         </div>
                     </section>
                 </main>
-            </div>
-            <Footer />
-        </>
+        </div>
     );
 }
 
 function ContactItem({ item }) {
     return (
         <a href={item.url} target="_blank" rel="noopener noreferrer">
-            <div className="flex gap-8 md:gap-4 items-center bg-primary-highlight px-2 py-3 rounded-md transition-opacity hover:bg-primary-highlightHover">
-                <img className="w-10" src={item.image} alt={item.alt} />
-                <p>{item.name}</p>
+            <div className="flex items-center gap-5 rounded-2xl border border-secondary-border/35 bg-primary-highlight/70 px-4 py-4 transition-colors duration-150 hover:bg-primary-highlightHover">
+                <img
+                    className={`w-10 ${item.invertInDark ? 'dark:invert' : ''}`}
+                    src={item.image}
+                    alt={item.alt}
+                />
+                <p className="font-medium text-primary-hover">{item.name}</p>
             </div>
         </a>
     );
