@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { blogPosts } from '../../data/blogData';
 import { Button } from '@/components/Button';
@@ -35,10 +36,13 @@ export default function Blog() {
                     <section className="grid grid-cols-1 sm:grid-cols-2 gap-12">
                         {blogPosts.map((post) => (
                             <div key={post.id} data-reveal className="cursor-pointer" onClick={() => openPost(post)}>
-                                <img
+                                <Image
                                     src={post.image}
+                                    width={post.imageWidth}
+                                    height={post.imageHeight}
+                                    sizes="(max-width: 639px) calc(100vw - 3rem), 21rem"
                                     alt={post.title}
-                                    className="rounded-md object-cover transform transition-transform duration-300 ease-in-out hover:scale-110"
+                                    className="h-auto w-full rounded-md object-cover transform transition-transform duration-300 ease-in-out hover:scale-105"
                                 />
                                 <h4 className="text-lg mt-4 mb-2">{post.title}</h4>
                                 <p className="text-primary">{truncateText(post.preview, 100)}</p>
@@ -76,8 +80,11 @@ export default function Blog() {
                                 </div>
                             </a>
                             <div className="mb-4">
-                                <img
+                                <Image
                                     src={selectedPost.image}
+                                    width={selectedPost.imageWidth}
+                                    height={selectedPost.imageHeight}
+                                    sizes="(max-width: 767px) calc(100vw - 5rem), 45rem"
                                     alt={selectedPost.title}
                                     className="w-full h-[200px] sm:h-[300px] lg:h-[500px] object-cover rounded-md"
                                 />

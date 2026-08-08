@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { MessagesSquare } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from './Button';
 import { HomeRevealSection, homeItemVariants } from './HomeMotion';
 
@@ -54,7 +55,14 @@ function CompletedShowcaseItem({ showcaseItem }) {
             </motion.div>
 
             <motion.div variants={homeItemVariants} className={imageRem || 'max-w-[30rem]'}>
-                <img className="w-full rounded-md" src={showcaseItem.image} alt={showcaseItem.imageAlt} />
+                <Image
+                    className="h-auto w-full rounded-md"
+                    src={showcaseItem.image}
+                    width={showcaseItem.imageWidth}
+                    height={showcaseItem.imageHeight}
+                    sizes="(max-width: 767px) calc(100vw - 3rem), 60rem"
+                    alt={showcaseItem.imageAlt}
+                />
             </motion.div>
 
             {showcaseItem.ctaButton && (

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Button } from '@/components/Button';
 import { Globe } from 'lucide-react';
 import { projects } from '../../data/projects';
@@ -21,23 +22,14 @@ export default function Portfolio() {
                         {projects.map((project, index) => (
                             <div key={index} data-reveal className="w-full flex flex-col gap-10">
                                 <div className="w-full flex flex-col md:flex-row items-center gap-5 transform transition-transform duration-300 ease-in-out hover:scale-105">
-                                    <div className="relative min-w-[17rem] w-full md:w-1/3 h-52 flex justify-center rounded-md overflow-hidden">
-                                        <div
-                                            className="z-0 absolute inset-0 bg-cover bg-center transform scale-110 filter blur-lg"
-                                            style={{ backgroundImage: `url(${project.image})` }}
+                                    <div className="relative flex h-52 w-full min-w-[17rem] justify-center overflow-hidden rounded-md bg-primary-highlightHover md:w-1/3">
+                                        <Image
+                                            fill
+                                            src={project.image}
+                                            alt={project.title}
+                                            sizes="(max-width: 767px) calc(100vw - 3rem), 15rem"
+                                            className={`object-cover ${index === 0 ? '' : 'object-[center_top]'}`}
                                         />
-
-                                        <div className="z-10 absolute inset-0 bg-black opacity-50" />
-
-                                        <div className="relative z-20 min-w-[17rem] w-[17rem] md:w-full">
-                                            <img
-                                                src={project.image}
-                                                alt={project.title}
-                                                className={`object-cover w-full h-full ${
-                                                    index === 0 ? '' : 'object-[center_top]'
-                                                }`}
-                                            />
-                                        </div>
                                     </div>
 
                                     <div className="w-full md:w-2/3 flex flex-col gap-6 md:gap-10 justify-between">

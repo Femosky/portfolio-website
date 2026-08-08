@@ -3,6 +3,8 @@ export const blogPosts = [
         id: 1,
         title: 'How to Deploy Your First Website on Vercel: A Comprehensive Guide',
         image: '/blog1.png',
+        imageWidth: 572,
+        imageHeight: 440,
         link: 'https://medium.com/@sonamgour17/how-to-deploy-your-first-website-on-vercel-a-comprehensive-guide-971662c2b0f8',
         preview: 'In today’s digital landscape, deploying a website is an essential skill for developers...',
         content: (
@@ -89,6 +91,8 @@ export const blogPosts = [
         id: 2,
         title: 'Building APIs with FastAPI: A Step-by-Step Guide for Mac and Windows',
         image: '/fast.png',
+        imageWidth: 848,
+        imageHeight: 477,
         link: 'https://medium.com/@sonamgour17/building-apis-with-fastapi-a-step-by-step-guide-for-mac-and-windows-5194ffc5ea1f',
         preview: 'FastAPI is a modern, high-performance web framework for building APIs with Python...',
         content: (
@@ -142,6 +146,8 @@ def read_root():
         id: 3,
         title: 'Creating Your First Next.js Application: A Step-by-Step Guide',
         image: '/next.png',
+        imageWidth: 1176,
+        imageHeight: 1056,
         link: 'https://medium.com/@sonamgour17/creating-your-first-next-js-application-a-step-by-step-guide-6188577f339a',
         preview: 'Next.js is a popular framework for React that makes building fast, modern web applications easier...',
         content: (

@@ -73,6 +73,42 @@ p {
     line-height: 1.65;
 }
 
+.site-grain {
+    opacity: 0.07;
+    background-size: 160px 160px;
+    mix-blend-mode: soft-light;
+    animation: site-grain-shift 12s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    transform: translateZ(0);
+    will-change: opacity, transform;
+}
+
+.dark .site-grain {
+    filter: invert(1);
+}
+
+@keyframes site-grain-shift {
+    0%,
+    100% {
+        opacity: 0.07;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 0.052;
+        transform: scale(1.01);
+    }
+
+    50% {
+        opacity: 0.062;
+        transform: scale(1.02);
+    }
+
+    75% {
+        opacity: 0.045;
+        transform: scale(1.01);
+    }
+}
+
 .site-header::before {
     position: fixed;
     right: 0;
@@ -291,6 +327,12 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .site-grain {
+        animation: none;
+        transform: none;
+        will-change: auto;
+    }
+
     .glass-nav-link {
         transition: none;
     }

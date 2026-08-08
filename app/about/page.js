@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { MoveUpRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/Button';
@@ -87,11 +88,15 @@ export default function About() {
             <main className="flex flex-col gap-16 md:gap-24">
                 <section className="sticky">
                     <div>
-                        <img
-                            className="rounded-md transform transition-transform duration-300 ease-in-out hover:scale-110"
-                            src="/profile_image_2.jpeg"
-                            alt="profile pic"
-                        />
+                            <Image
+                                className="h-auto w-full rounded-md transform transition-transform duration-300 ease-in-out hover:scale-105"
+                                src="/profile_image_2.jpeg"
+                                width={1280}
+                                height={960}
+                                sizes="(max-width: 767px) calc(100vw - 3rem), 45rem"
+                                priority
+                                alt="Portrait of Femi Ojeyemi"
+                            />
                     </div>
                 </section>
 
@@ -169,7 +174,13 @@ function ExperienceItem({ item }) {
                 rel={item.rel}
             >
                 <div className="flex items-center w-2/3 gap-4">
-                    <img src={item.image} className="w-12 rounded-full object-cover" alt={item.alt} />
+                    <Image
+                        src={item.image}
+                        width={48}
+                        height={48}
+                        className="size-12 rounded-full object-cover"
+                        alt={item.alt}
+                    />
                     <div className="flex flex-col gap-px">
                         <p className="external-arrow font-medium text-primary-hover">{item.title}</p>
                         <p className="text-primary">{item.company}</p>

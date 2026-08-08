@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export const showcaseItems = [
     {
         type: 'complete',
@@ -9,6 +11,8 @@ export const showcaseItems = [
             'Cardernir is a native SwiftUI flashcard language-learning app that helps you learn more vocabulary using an effective spaced repetition method by simply swiping left and right.',
         descriptionResize: true,
         image: '/cardernir_screenshot.jpeg',
+        imageWidth: 3216,
+        imageHeight: 1080,
         imageRem: 'max-w-[60rem]',
         imageAlt: 'cardernir app screenshot',
         ctaButton: 'Learn more',
@@ -31,6 +35,8 @@ export const showcaseItems = [
         ctaTitleLink: 'https://apps.apple.com/us/app/roki-for-the-african-diaspora/id6740173437',
         description: <RokiShowcaseDescription />,
         image: '/roki-screenshot.jpeg',
+        imageWidth: 1280,
+        imageHeight: 816,
         imageAlt: 'roki app screenshot',
         ctaButton: 'Learn more',
         ctaButtonLink: 'https://rokiapp.vercel.app',
@@ -54,6 +60,8 @@ export const showcaseItems = [
         ctaTitleLink: '',
         description: 'AI Voice Assitant to assist you only through talking.',
         image: '/voicegpt.png',
+        imageWidth: 1092,
+        imageHeight: 1080,
         imageRem: 'max-w-[25rem]',
         imageAlt: 'voice gpt screenshot',
         ctaButton: 'View on GitHub',
@@ -85,7 +93,7 @@ function RokiShowcaseTitle() {
         <h3 className="flex flex-col md:flex-row items-center justify-center gap-1 text-2xl md:text-3xl text-center">
             Download my first ever published app,
             <span className="inline-flex items-center gap-1 italic">
-                <img className="size-5" src="/roki-logo.png" alt="roki app logo" />
+                <Image className="size-5" src="/roki-logo.png" width={20} height={20} alt="Roki app logo" />
                 oki
             </span>
         </h3>

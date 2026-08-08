@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { PageTitle } from '@/components/PageTitle';
 
 export default function Contact() {
@@ -20,7 +21,7 @@ export default function Contact() {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/femiojeyemi/',
             image: '/linkedin.png',
-            alt: 'github icon',
+            alt: 'LinkedIn icon',
         },
         // {
         //     name: 'Instagram',
@@ -66,9 +67,11 @@ function ContactItem({ item }) {
     return (
         <a href={item.url} target="_blank" rel="noopener noreferrer">
             <div className="flex items-center gap-5 rounded-2xl border border-secondary-border/35 bg-primary-highlight/70 px-4 py-4 transition-colors duration-150 hover:bg-primary-highlightHover">
-                <img
+                <Image
                     className={`w-10 ${item.invertInDark ? 'dark:invert' : ''}`}
                     src={item.image}
+                    width={40}
+                    height={40}
                     alt={item.alt}
                 />
                 <p className="font-medium text-primary-hover">{item.name}</p>

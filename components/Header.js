@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'motion/react';
@@ -21,7 +22,15 @@ function isItemActive(path, href) {
 
 function NavIcon({ item, className = 'h-4 w-4' }) {
     if (item.home) {
-        return <img className={`${className} rounded-full object-cover`} src="/profile-image.png" alt="" />;
+        return (
+            <Image
+                className={`${className} rounded-full object-cover`}
+                src="/profile-image.png"
+                width={48}
+                height={48}
+                alt=""
+            />
+        );
     }
 
     const Icon = item.icon;
